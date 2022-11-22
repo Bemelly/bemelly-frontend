@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+$colorprincipal: #A53DFF;
+$blanco: #ffff;
+$negro: #0000;
+$softext: #556070;
+
+$primary:$colorprincipal;
+$hover-color: white;
+$color:$blanco;
+$circlesize: 1200px;
+
+
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
