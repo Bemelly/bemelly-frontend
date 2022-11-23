@@ -1,0 +1,16 @@
+.search-bar{
+    max-width: 50%;
+}
+
+.logo{
+    max-height: 40px;
+}
+
+@media (max-width: 400px) {
+    .logo{
+        display: none;
+    }
+    .search-bar{
+        max-width: 100%;
+    }
+}
