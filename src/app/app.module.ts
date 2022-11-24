@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AuthLayoutComponent } from './layaouts/auth-layout/auth-layout.component';
 import { NavbarComponent } from './layaouts/components/navbar/navbar.component';
 import { FooterComponent } from './layaouts/components/footer/footer.component';
+import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellyapp-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    BemellyappLayoutComponent
   ],
   imports: [
     BrowserModule,
