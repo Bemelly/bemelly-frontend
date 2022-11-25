@@ -12,3 +12,5 @@ $circlesize: 1200px;
 
 
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

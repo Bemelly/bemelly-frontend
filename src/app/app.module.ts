@@ -7,6 +7,9 @@ import { AuthLayoutComponent } from './layaouts/auth-layout/auth-layout.componen
 import { NavbarComponent } from './layaouts/components/navbar/navbar.component';
 import { FooterComponent } from './layaouts/components/footer/footer.component';
 import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellyapp-layout.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +17,13 @@ import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellya
     AuthLayoutComponent,
     NavbarComponent,
     FooterComponent,
-    BemellyappLayoutComponent
+    BemellyappLayoutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

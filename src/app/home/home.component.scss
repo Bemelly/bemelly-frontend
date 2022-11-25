@@ -1,0 +1,14 @@
+.fondogradient {
+    background-attachment: fixed;
+    background: rgb(244,222,247);
+    background: linear-gradient(207deg, rgba(244,222,247,0.5) 1%, rgba(255,255,255,1) 80%);
+}
+
+.example-card {
+    max-width: 400px;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
