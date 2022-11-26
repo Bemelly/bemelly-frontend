@@ -23,20 +23,14 @@
 
         <div class="row">
 
+            
             <mat-form-field appearance="fill">
-                <mat-label>Registrarse como:</mat-label>
-                <mat-select formControlName="role">
-                    <mat-option>
-                        Cliente
-                    </mat-option>
-                    <mat-option>
-                        Profesional
-                    </mat-option>
-                    <mat-option>
-                        Empresa
-                      </mat-option>
-                </mat-select>
-                
+              <mat-label>Registrarse como:</mat-label>
+              <select matNativeControl required>
+                <option value="Cliente">Cliente</option>
+                <option value="Profesional">Profesional</option>
+                <option value="Empresa">Empresa</option>
+              </select>
             </mat-form-field>
         </div>
 
