@@ -7,7 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatSelectModule} from '@angular/material/select'; 
+import { MatSelectModule } from '@angular/material/select'; 
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent],
