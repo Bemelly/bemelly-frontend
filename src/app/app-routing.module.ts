@@ -5,7 +5,7 @@ import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellya
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: BemellyappLayoutComponent,
     children: [
       {
@@ -15,7 +15,7 @@ const routes: Routes = [
     ]
   },
   {
-  path: 'home',
+  path: '',
   component: LandingComponent
 }
 ];
