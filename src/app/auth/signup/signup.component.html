@@ -1,0 +1,40 @@
+<h2>Registrarse</h2>
+<div class="row">
+    <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombre Completo</mat-label>
+                <input matInput placeholder="" value="" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="" value="" formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="" value="" formControlName="password">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+
+            
+            <mat-form-field appearance="fill">
+              <mat-label>Registrarse como:</mat-label>
+              <select matNativeControl required formControlName="role">
+                <option value="Cliente">Cliente</option>
+                <option value="Profesional">Profesional</option>
+                <option value="Empresa">Empresa</option>
+              </select>
+            </mat-form-field>
+        </div>
+
+
+        <button mat-raised-button color="primary">Registrarse</button>
+    </form>
+</div>
