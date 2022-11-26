@@ -14,6 +14,18 @@ const routes: Routes = [
       }
     ]
   },
+
+  {
+    path: '',
+    component: BemellyappLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: ()=> import('./auth/auth.module').then((m)=>m.AuthModule)
+      }
+    ]
+  },
+
   {
   path: '',
   component: LandingComponent
