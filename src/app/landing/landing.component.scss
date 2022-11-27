@@ -74,11 +74,11 @@ gap: 5px;
 
 }
 
-img{
+.tarjetas img{
     transition: 0.3s;
 }
 
-img:hover{
+.tarjetas img:hover{
 scale: 1.1;
 }
 
@@ -109,20 +109,73 @@ scale: 1.1;
     box-shadow: -1px -2px 23px -3px rgba(0,0,0,0.2);
 }
 
-@media (min-width: 400px) {
+@media (max-width: 720px) {
     .rv-body{
         margin-bottom: 150px;
     }
+    .logo{
+        visibility: hidden;
+    }
+    header{
+        padding-top: 0px !important;
+        margin-top: -30px !important;
 
-}
-
-@media (min-width: 700px) {
+    }
+    header ul{
+        font-size: 12px;
+    }
+    .infobox {
+        justify-content: center;
+    }
+    .wildyspointer{
+        max-width: 350px;
+        translate: -13% -100% !important;
+    }
     .logotiendas{
-    position: fixed;
-    top: 200px;
-    margin-left: 300px;
+        translate: 130% -230% !important;
+        max-width: 150px;
+        position: absolute;
+    }
+    .scrollingbody{
+        margin-top: 350px;
+    }
 }
+
+@media (max-width: 850px) {
+
+    header{
+
+        margin-top: 0px !important;
+
+    }
+
+    .btn{
+        --bs-btn-padding-y: .25rem; 
+        --bs-btn-padding-x: .5rem; 
+        --bs-btn-font-size: .66rem;
+    }
+    header ul{
+        font-size: 12px;
+    }
+    .infobox {
+        justify-content: center;
+    }
+    .wildyspointer{
+        max-width: 600px;
+        translate: -5% -100% !important;
+    }
+    .logotiendas{
+        translate: 130% -200% !important;
+        max-width: 290px;
+        position: absolute;
+    }
+    .scrollingbody{
+        margin-top: 500px;
+    }
 }
+
+
+
 
 .fa-star{
     color: #4C40F7
@@ -141,23 +194,17 @@ scale: 1.1;
 }
 
 .wildyspointer{
-    max-width: 100%;
-    translate: -120px;
+    max-height: 500px;
+    translate: 530px -100%;
+    position: absolute;
+}
+.logotiendas{
+    translate: 950px -193%;
+    position: absolute;
 }
 
 .storebadge{
     max-width: 300px;
-}
-
-
-.logotiendasc{
-    position: relative;
-}
-
-.logotiendas{
-    position: absolute;
-    top: 150px;
-    margin-left: 300px;
 }
 
 .fondogradient {

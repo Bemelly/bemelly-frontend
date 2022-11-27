@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent],
@@ -18,7 +20,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule
   ],
+  exports: [
+    LoginComponent
+  ]
 })
 export class AuthModule {}

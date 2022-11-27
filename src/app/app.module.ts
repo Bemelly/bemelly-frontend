@@ -10,6 +10,10 @@ import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellya
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
+
 
 
 @NgModule({
@@ -25,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

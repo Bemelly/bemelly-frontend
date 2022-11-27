@@ -9,6 +9,12 @@
         </div>
         <div class="row">
             <mat-form-field class="example-full-width">
+                <mat-label>Cedula</mat-label>
+                <input type="email" matInput placeholder="" value="" formControlName="CC">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>
                 <input type="email" matInput placeholder="" value="" formControlName="email">
             </mat-form-field>
@@ -23,16 +29,16 @@
 
         <div class="row">
 
-            
             <mat-form-field appearance="fill">
               <mat-label>Registrarse como:</mat-label>
               <select matNativeControl required formControlName="role">
-                <option value="Cliente">Cliente</option>
-                <option value="Profesional">Profesional</option>
-                <option value="Empresa">Empresa</option>
+                <option value="client">Cliente</option>
+                <option value="professional">Profesional</option>
+                <option value="admin">Empresa</option>
               </select>
             </mat-form-field>
         </div>
+
 
 
         <button mat-raised-button color="primary">Registrarse</button>

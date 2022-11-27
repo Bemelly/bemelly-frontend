@@ -1,3 +1,4 @@
+<div class="fixed-top" id="progressvar" [style]='visible'><mat-progress-bar mode="query"></mat-progress-bar></div>
 <header class="d-flex gap-3 container-fluid justify-content-between bg-light py-3 border-bottom border-2 align-items-center">
     <div class="logo">
         <img class="bi me-2 bemelly" height="40" role="img" src="/assets/bemelly.svg" alt="">
@@ -7,7 +8,14 @@
             aria-describedby="button-addon2">
         <button class="btn btn-primary text-white" type="button" id="button-addon2">Buscar</button>
     </div>
-    <div class="profile">
-        <img class="rounded-circle " src="/assets/users/profilepictures/wildysp.jpg" width="50px" alt="">
+    <div class="profile gap-4 d-flex align-items-center">
+        <div>Hola, <strong>{{user.name}}</strong></div>
+        <div ><img [matMenuTriggerFor]="menu" class="rounded-circle " src="/assets/users/profilepictures/wildysp.jpg" width="50px" alt="">
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Editar perfil</button>
+                <button mat-menu-item>Ver reservas</button>
+                <button mat-menu-item (click)="logout()">Cerrar sesion</button>
+              </mat-menu></div>
+        
     </div>
 </header>

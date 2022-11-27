@@ -1,1 +1,18 @@
 <p>login works!</p>
+<form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="row">
+<mat-form-field appearance="outline">
+    <mat-label>correo</mat-label>
+    <input matInput placeholder="usuario@gmail.com" formControlName="email">
+  </mat-form-field>
+</div>
+  <div class="row">
+  <mat-form-field appearance="outline">
+    <mat-label>contraseña</mat-label>
+    <input type="password" matInput formControlName="password">
+  </mat-form-field>
+</div>
+<div class="row">
+    <button mat-raised-button color="primary">Iniciar sesion</button>
+</div>
+</form>
