@@ -13,5 +13,8 @@ export class AuthService {
   signup(account: any) {
     return this.http.post(`${environment.apiUrl}/api/users/newUser`, account);
   }
+
+  login(account: any){
+    return this.http.post(`${environment.apiUrl}/api/auth/login`, account);
+  }
 }
-//mmmmmmm
