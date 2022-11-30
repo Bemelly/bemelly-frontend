@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { fromEventPattern } from 'rxjs';
+import { ProfileService } from 'src/app/_services/profile.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
 export class NavbarComponent implements OnInit{
   user: any
   visible = 'visibility: hidden;'
-  constructor(private tokenService: TokenStorageService, private router: Router) {}
+  constructor(private tokenService: TokenStorageService, private router: Router, private profileService: ProfileService) {}
 
   ngOnInit(): void {
     this.user = this.tokenService.getUser()
@@ -21,10 +23,15 @@ export class NavbarComponent implements OnInit{
     this.visible = 'visibility: visible;'
     setTimeout(() => {
      this.router.navigate(['/']) 
-    }, 4000);
-    
+    }, 2000);
+  }
 
-
+  changephoto(e: any){
+    const file = e.target.files[0]
+    console.log(file);
+    const formData = new FormData()
+    const photoProfile = formData.append('photo', file)
+    this.profileService.uploadPhotoProfile(photoProfile)
   }
 
 }
