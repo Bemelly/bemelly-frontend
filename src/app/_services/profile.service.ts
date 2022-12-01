@@ -10,13 +10,6 @@ export class ProfileService {
 
   constructor(private http: HttpClient) { }
   uploadPhotoProfile(photoProfile: any){
-    return this.http.put(`${environment.apiUrl}/api/profile/updatePhotoProfile`, photoProfile).subscribe({
-      next: (data) => {
-        console.log(data);
-      },
-      error: (error)=>{
-        console.log(error);
-      }
-    })
+    return this.http.put(`${environment.apiUrl}/api/profile/updatePhotoProfile`, photoProfile)
   }
 }

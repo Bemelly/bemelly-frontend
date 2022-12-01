@@ -31,7 +31,14 @@ export class NavbarComponent implements OnInit{
     console.log(file);
     const formData = new FormData()
     const photoProfile = formData.append('photo', file)
-    this.profileService.uploadPhotoProfile(photoProfile)
+    this.profileService.uploadPhotoProfile(photoProfile).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (error)=>{
+        console.log(error);
+      }
+    })
   }
 
 }
