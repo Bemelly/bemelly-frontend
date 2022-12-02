@@ -2,7 +2,7 @@
 
 <header class="d-flex gap-3 container-fluid justify-content-between bg-light py-3 border-bottom border-2 align-items-center">
     <div class="logo">
-        <img class="bi me-2 bemelly" height="40" role="img" src="/assets/bemelly.svg" alt="">
+        <img  class="bi me-2 bemelly" height="40" role="img" src="/assets/bemelly.svg" alt="">
     </div>
     <div class="search-bar input-group  rounded-pill "><input type="text" class="form-control"
             placeholder="Buscar un servicio, lugar o profesional" aria-label="Recipient's username"
@@ -10,15 +10,18 @@
         <button class="btn btn-primary text-white" type="button" id="button-addon2">Buscar</button>
     </div>
     <div class="profile gap-4 d-flex align-items-center">
-        <div>Hola, <strong>{{user.name}}</strong></div>
-        <div ><img [matMenuTriggerFor]="menu" class="rounded-circle " src="/assets/users/profilepictures/wildysp.jpg" width="50px" alt="">
+        <div >Hola, <strong >{{user.name}}</strong></div>
+        <div  >
+            <h4  >Cambiar</h4>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="fileInput.click()">Cambiar foto</button>
                 <input type="file" #fileInput hidden name="filename" id="myFile" (change)="changephoto($event)" accept="image/*">
                 <button mat-menu-item>Editar perfil</button>
                 <button mat-menu-item>Ver reservas</button>
                 <button mat-menu-item (click)="logout()">Cerrar sesion</button>
-              </mat-menu></div>
-        
+            </mat-menu>
+            <img classs="rounded-circle " [src]="profile.photoProfile" width="50px" alt="">
+        </div>
+            
     </div>
 </header>

@@ -11,6 +11,7 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
 })
 export class NavbarComponent implements OnInit{
   user: any
+  profile: any
   visible = 'visibility: hidden;'
   constructor(private tokenService: TokenStorageService, private router: Router, private profileService: ProfileService) {}
 
@@ -28,6 +29,9 @@ export class NavbarComponent implements OnInit{
 
   changephoto(e: any){
     const file = e.target.files[0]
+    if (!file){
+      return
+    }
     console.log(file);
     const formData = new FormData()
     const photoProfile = formData.append('photo', file)
@@ -40,5 +44,16 @@ export class NavbarComponent implements OnInit{
       }
     })
   }
-
+ getProfile(){
+  this.profileService.getProfile().subscribe({
+    next:(data)=>{
+      console.log(data);
+      
+    },
+    error:(error)=>{
+      console.log(error);
+      
+    }
+  })
+ }
 }
