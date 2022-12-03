@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component'; 
 import { AuthLayoutComponent } from './layaouts/auth-layout/auth-layout.component';
 import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellyapp-layout.component';
+import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
@@ -32,6 +33,11 @@ const routes: Routes = [
   {
   path: '',
   component: LandingComponent,
+
+},
+{
+  path: 'userprofile',
+  component: ProfileComponent,
 
 }
 ];

@@ -96,7 +96,7 @@
         <div class="card" style="width: 18rem;" *ngFor="let usuario of usuarios">
           <div class="card-body">
             <div class="user d-flex gap-2">
-              <img class="rounded-circle " src="/assets/users/profilepictures/wildysp.jpg" width="55px" alt="">
+              <img class="rounded-circle " [src]="profile?.photoProfile || defaultAvatar" width="55px" alt="">
               <div class="puntuacion">
                 <div>{{usuario.name}}</div>
                 <div>⭐⭐⭐⭐⭐ <strong>4.8/5</strong> </div>

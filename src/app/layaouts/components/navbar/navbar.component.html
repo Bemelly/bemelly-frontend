@@ -9,10 +9,14 @@
             aria-describedby="button-addon2">
         <button class="btn btn-primary text-white" type="button" id="button-addon2">Buscar</button>
     </div>
-    <div class="profile gap-4 d-flex align-items-center">
+    <div class="profile gap-2 d-flex align-items-center">
         <div >Hola, <strong >{{user.name}}</strong></div>
-        <div  >
-            <h4  >Cambiar</h4>
+        <div >
+            <div class="avatar d-flex align-items-center" [matMenuTriggerFor]="menu" >
+                <img  class="rounded-circle" [src]="profile?.photoProfile || defaultAvatar" width="50px" height="50px" alt="">
+                <mat-icon>more_vert</mat-icon>
+            </div>
+            
             <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="fileInput.click()">Cambiar foto</button>
                 <input type="file" #fileInput hidden name="filename" id="myFile" (change)="changephoto($event)" accept="image/*">
@@ -20,7 +24,6 @@
                 <button mat-menu-item>Ver reservas</button>
                 <button mat-menu-item (click)="logout()">Cerrar sesion</button>
             </mat-menu>
-            <img classs="rounded-circle " [src]="profile.photoProfile" width="50px" alt="">
         </div>
             
     </div>

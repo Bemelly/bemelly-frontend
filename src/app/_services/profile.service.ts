@@ -15,7 +15,7 @@ export class ProfileService {
     private http: HttpClient,
     private tokenService: TokenStorageService) { }
   uploadPhotoProfile(photoProfile: any){
-    return this.http.put(`${environment.apiUrl}/api/profile/updatePhotoProfile`, photoProfile, {headers: this.headers}
+    return this.http.post(`${environment.apiUrl}/api/profile/updatePhotoProfile`, photoProfile, {headers: this.headers}
     )
   }
   getProfile(){
