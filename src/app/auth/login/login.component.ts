@@ -26,7 +26,7 @@ export class LoginComponent {
       this.authService.login(this.form.value).subscribe({
         next: (data: any) => {
           this.tokenService.saveToken(data.token);
-          this.router.navigate(['/']);
+          this.router.navigate(['/home']);
         },
         error: (err) => {
           console.log(err);
@@ -37,3 +37,5 @@ export class LoginComponent {
     }
   }
 }
+
+
