@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component'; 
 import { AuthLayoutComponent } from './layaouts/auth-layout/auth-layout.component';
 import { BemellyappLayoutComponent } from './layaouts/bemellyapp-layout/bemellyapp-layout.component';
+import { ProfesionalprofileComponent } from './profesionalprofile/profesionalprofile.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_helpers/auth.guard';
 
@@ -18,7 +19,6 @@ const routes: Routes = [
       }
     ]
   },
-
   {
     path: 'users',
     component: AuthLayoutComponent,
@@ -29,19 +29,19 @@ const routes: Routes = [
       }
     ]
   },
-
-  {
+{
   path: '',
   component: LandingComponent,
-
 },
 {
   path: 'userprofile',
   component: ProfileComponent,
-
+},
+{
+  path: 'profesionals',
+  component: ProfesionalprofileComponent,
 }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
