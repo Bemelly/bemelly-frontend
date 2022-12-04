@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatIconModule} from '@angular/material/icon';
+import { ProfesionalprofileComponent } from './profesionalprofile/profesionalprofile.component';
 
 
 
@@ -25,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     FooterComponent,
     BemellyappLayoutComponent,
+    ProfesionalprofileComponent,
   ],
   imports: [
     BrowserModule,
