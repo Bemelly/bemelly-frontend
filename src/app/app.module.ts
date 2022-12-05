@@ -14,7 +14,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatIconModule} from '@angular/material/icon';
 import { ProfesionalprofileComponent } from './profesionalprofile/profesionalprofile.component';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -36,7 +37,9 @@ import { ProfesionalprofileComponent } from './profesionalprofile/profesionalpro
     HttpClientModule,
     MatMenuModule,
     MatProgressBarModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

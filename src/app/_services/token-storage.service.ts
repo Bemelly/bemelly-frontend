@@ -21,9 +21,9 @@ export class TokenStorageService {
   }
 
 
-  getUser() {
+  getUser () {
     const token = window.sessionStorage.getItem(TOKEN_KEY);
-    const user = jwt_decode(token!);
+    const user =  jwt_decode(token!);
     return user;
   }
 

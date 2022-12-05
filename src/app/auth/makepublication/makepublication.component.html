@@ -1,0 +1,16 @@
+
+
+
+<form action="" class="d-flex flex-column p-5 container-fluid"  [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+        <mat-label>Nombre de servicio</mat-label>
+        <input matInput formControlName="serviceName">
+      </mat-form-field>
+
+        <mat-label>Descripcion</mat-label>
+        
+        
+        <button class="btn btn-primary text-white mt-5">Crear Publicacion</button>
+        <textarea  formControlName="description">At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.</textarea>
+      </form>
+      

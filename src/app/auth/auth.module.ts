@@ -9,10 +9,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MakepublicationComponent } from './makepublication/makepublication.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent],
+  declarations: [LoginComponent, SignupComponent, MakepublicationComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
