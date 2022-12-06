@@ -10,10 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MakepublicationComponent } from './makepublication/makepublication.component';
+import { ShowpublicationComponent } from './showpublication/showpublication.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent, MakepublicationComponent],
+  declarations: [LoginComponent, SignupComponent, MakepublicationComponent, ShowpublicationComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
