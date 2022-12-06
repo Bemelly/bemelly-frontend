@@ -14,12 +14,8 @@ const routes: Routes = [
     component: BemellyappLayoutComponent,
     children: [
       {
-        path: 'hola',
+        path: '',
         loadChildren: ()=> import('./home/home.module').then((m)=>m.HomeModule)
-      },
-      {
-        path: 'crearPublicacion',
-        loadChildren: ()=> import('./publication/publication.module').then((m)=>m.PublicationModule)
       }
     ]
   },
