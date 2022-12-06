@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { MakepublicationComponent } from './makepublication/makepublication.component';
+import { ShowpublicationComponent } from './showpublication/showpublication.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
 {
   path: 'makepublication',
   component: MakepublicationComponent,
+},
+{
+  path: 'showpublication',
+  component: ShowpublicationComponent,
 },
 
 ];
