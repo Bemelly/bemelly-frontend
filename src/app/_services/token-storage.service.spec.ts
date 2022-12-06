@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { TokenStorageService } from './token-storage.service';
 
 describe('TokenStorageService', () => {
@@ -13,4 +12,5 @@ describe('TokenStorageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  
 });

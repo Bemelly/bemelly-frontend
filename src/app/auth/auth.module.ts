@@ -13,6 +13,7 @@ import { MakepublicationComponent } from './makepublication/makepublication.comp
 import { ShowpublicationComponent } from './showpublication/showpublication.component';
 
 
+
 @NgModule({
   declarations: [LoginComponent, SignupComponent, MakepublicationComponent, ShowpublicationComponent],
   imports: [
