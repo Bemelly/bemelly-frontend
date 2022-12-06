@@ -11,11 +11,16 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MakepublicationComponent } from './makepublication/makepublication.component';
 import { ShowpublicationComponent } from './showpublication/showpublication.component';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatIconModule} from '@angular/material/icon';
+import { TagsComponent } from './makepublication/components/tags/tags.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
 
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent, MakepublicationComponent, ShowpublicationComponent],
+  declarations: [LoginComponent, SignupComponent, MakepublicationComponent, ShowpublicationComponent, TagsComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -24,7 +29,10 @@ import { ShowpublicationComponent } from './showpublication/showpublication.comp
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatChipsModule,
+    MatIconModule,
+    MatAutocompleteModule
   ],
   exports: [
     LoginComponent
