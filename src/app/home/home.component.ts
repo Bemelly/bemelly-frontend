@@ -35,6 +35,8 @@ user: any
   showPublication(data:any){
     this.publicationSev.getPublication(data).subscribe({
       next:(response: any)=>{
+        console.log(response);
+        
         this.router.navigate([`/users/showpulication/${data}`])
         console.log(data);
         

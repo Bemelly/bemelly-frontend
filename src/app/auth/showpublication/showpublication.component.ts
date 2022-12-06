@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-showpublication',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./showpublication.component.scss']
 })
 export class ShowpublicationComponent {
-
+constructor(private route: ActivatedRoute){
+  route.paramMap.subscribe(paramMap =>{
+    console.log(paramMap.get('owner'));
+    
+})
+  
+}
 }
