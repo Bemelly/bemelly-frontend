@@ -8,11 +8,8 @@
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img
-            mat-card-image
-            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu"
-/>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu" />
           <mat-card-content>
             <p>
               The Shiba Inu is the smallest of the six original and distinct
@@ -29,11 +26,8 @@
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img
-            mat-card-image
-            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu"
-          />
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu" />
           <mat-card-content>
             <p>
               The Shiba Inu is the smallest of the six original and distinct
@@ -50,11 +44,8 @@
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img
-            mat-card-image
-            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu"
-          />
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu" />
           <mat-card-content>
             <p>
               The Shiba Inu is the smallest of the six original and distinct
@@ -71,11 +62,8 @@
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img
-            mat-card-image
-            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu"
-          />
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu" />
           <mat-card-content>
             <p>
               The Shiba Inu is the smallest of the six original and distinct
@@ -90,34 +78,10 @@
     </mat-tab>
     <mat-tab label="A Domicilio">
       <div class="d-flex gap-3 flex-wrap">
-        <div class="card" style="width: 18rem">
-          <div class="card-body">
-            <div class="user d-flex gap-2">
-              <img
-                class="rounded-circle"
-                src="/assets/users/profilepictures/wildysp.jpg"
-                width="55px"
-                alt=""
-              />
-              <div class="puntuacion">
-                <div>Wildys Lomelly</div>
-                <div>⭐⭐⭐⭐⭐ <strong>4.8/5</strong></div>
-                <div class="text-seconday fw-lighter" style="font-size: 11px">
-                  1357 servicios completados
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="card" style="width: 18rem" *ngFor="let usuario of usuarios">
-          <div class="card-body">
+          <div class="card-body" >
             <div class="user d-flex gap-2">
-              <img
-                class="rounded-circle"
-                [src]="usuario?.photoProfile || defaultAvatar"
-                width="55px"
-                alt=""
-              />
+              <img class="rounded-circle" [src]="usuario?.photoProfile || defaultAvatar" width="55px" alt="" (click)="showPublication(usuario.CC)" />
               <div class="puntuacion">
                 <div>{{ usuario.name }}</div>
                 <div>⭐⭐⭐⭐⭐ <strong>4.8/5</strong></div>

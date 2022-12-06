@@ -21,7 +21,7 @@ const routes: Routes = [
   component: MakepublicationComponent,
 },
 {
-  path: 'showpublication',
+  path: 'showpublication/:owner',
   component: ShowpublicationComponent,
 },
 

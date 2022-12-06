@@ -33,9 +33,6 @@ export class MakepublicationComponent {
         ownerCC: this.user.CC
       })
     }
-
-    
-
     
   onSubmit(): void {
     if (this.form.valid) {
@@ -43,8 +40,6 @@ export class MakepublicationComponent {
         next: (data: any) => {
           console.log(data);
           console.log('se ha creado la pu');
-          
-          
         },
         error: (err:any) => {
           console.log(err);
