@@ -1,14 +1,18 @@
 .fondogradient {
-    background-attachment: fixed;
-    background: rgb(244,222,247);
-    background: linear-gradient(207deg, rgba(244,222,247,0.5) 1%, rgba(255,255,255,1) 80%);
+  background-attachment: fixed;
+  background: rgb(240, 240, 240);
 }
 
-.example-card {
-    max-width: 400px;
-  }
-
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+.card {
+  max-width: 400px;
+  border: 1px solid black;
+  box-shadow: 1px 10px 20px #a53dff;
+}
+.polka {
+  background-image: radial-gradient(rgb(214, 214, 214) 10.8%, transparent 10.8%),
+    radial-gradient(rgb(216, 216, 216) 10.8%, transparent 10.8%);
+  background-position: 0px 0px, 12px 12px;
+  background-size: 24px 24px;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 100px;
+}

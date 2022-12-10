@@ -12,8 +12,10 @@ import { PublicationService } from '../_services/publication.service';
 })
 export class HomeComponent implements OnInit {
   user: any;
+  estrellas: any = ['⭐', '⭐', '⭐', '⭐', '⭐'];
   usuarios: any;
   profile: any;
+  star = this.randomStar();
   defaultAvatar: string =
     'https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg';
   constructor(
@@ -31,6 +33,9 @@ export class HomeComponent implements OnInit {
       next: (data: any) => {
         console.log(data);
         this.usuarios = data;
+        // this.estrellas = this.randomStar(this.usuarios.length);
+        // console.log(this.estrellas);
+        // this.items = { usuarios: this.usuarios, estrellas: this.estrellas };
       },
       error: (err: any) => {
         console.log(err);
@@ -59,5 +64,18 @@ export class HomeComponent implements OnInit {
         console.log(error);
       },
     });
+  }
+
+  randomStar() {
+    let final = '';
+    const estrella = '⭐';
+    const aleatorio = Math.floor(Math.random() * (6 - 3) + 3);
+    for (let i = 0; i < aleatorio; i++) {
+      final += estrella;
+    }
+    return final;
+  }
+  randomService() {
+    return Math.floor(Math.random() * (100000 - 5000) + 5000);
   }
 }

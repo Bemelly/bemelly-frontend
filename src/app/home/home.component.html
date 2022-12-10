@@ -1,99 +1,27 @@
-<div class="vh-100 fondogradient">
-  <mat-tab-group animationDuration="800ms">
-    <mat-tab label="Todos" class="bg-light">
-      <div class="d-flex flex-wrap justify-content-evenly py-3 gap-3">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu" />
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct
-              spitz breeds of dog from Japan. A small, agile dog that copes very
-              well with mountainous terrain, the Shiba Inu was originally bred
-              for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions> </mat-card-actions>
-        </mat-card>
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu" />
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct
-              spitz breeds of dog from Japan. A small, agile dog that copes very
-              well with mountainous terrain, the Shiba Inu was originally bred
-              for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions> </mat-card-actions>
-        </mat-card>
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu" />
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct
-              spitz breeds of dog from Japan. A small, agile dog that copes very
-              well with mountainous terrain, the Shiba Inu was originally bred
-              for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions> </mat-card-actions>
-        </mat-card>
-        <mat-card class="example-card">
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu" />
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct
-              spitz breeds of dog from Japan. A small, agile dog that copes very
-              well with mountainous terrain, the Shiba Inu was originally bred
-              for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions> </mat-card-actions>
-        </mat-card>
-      </div>
-    </mat-tab>
-    <mat-tab label="A Domicilio">
-      <div class="d-flex gap-3 flex-wrap">
-        <div class="card" style="width: 18rem" *ngFor="let usuario of usuarios">
-          <div class="card-body" >
-            <div class="user d-flex gap-2">
-              <img class="rounded-circle" [src]="usuario?.photoProfile || defaultAvatar" width="55px" alt="" (click)="showPublication(usuario.CC)" />
-              <div class="puntuacion">
-                <div>{{ usuario.name }}</div>
-                <div>⭐⭐⭐⭐⭐ <strong>4.8/5</strong></div>
-                <div class="text-seconday fw-lighter" style="font-size: 11px">
-                  1357 servicios completados
-                </div>
-              </div>
+<div class="vh-100">
+  <div
+    class="d-flex polka gap-3 flex-wrap justify-content-center fondogradient"
+  >
+    <div class="card mt-5" *ngFor="let usuario of usuarios">
+      <div class="card-body" (click)="showPublication(usuario.CC)">
+        <div class="user d-flex gap-2 p-2">
+          <img
+            class="rounded-circle"
+            [src]="usuario?.photoProfile || defaultAvatar"
+            width="55px"
+            alt=""
+          />
+          <div class="puntuacion">
+            <div>{{ usuario.name }}</div>
+            <div>
+              <strong>{{ randomStar() }}</strong>
+            </div>
+            <div class="text-seconday fw-lighter" style="font-size: 11px">
+              {{ randomService() }} servicios completados
             </div>
           </div>
         </div>
       </div>
-    </mat-tab>
-    <mat-tab label="Al lugar"> </mat-tab>
-  </mat-tab-group>
+    </div>
+  </div>
 </div>
