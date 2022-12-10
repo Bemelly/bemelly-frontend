@@ -2,8 +2,87 @@
         <img class="rounded" src="https://a0.muscache.com/im/pictures/8d7970be-b461-4c64-8b25-3f0381381070.jpg?im_w=1200" alt="">
     </div> -->
 <div class="container">
-  <div class="row">
-    <div class="col-7">
+  <div class="userownerinfo">
+    <div class="p-info-all d-flex align-items-end">
+      <img class="profilep" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
+        width="180" height="180" alt="">
+      <div class="d-flex ms-4 flex-column pb-4">
+        <h1>Fabian De Gouveia</h1>
+        <div class=" info-count">
+          <div>{{ randomStar() }}</div>
+          <div>{{ randomService() }} Servicios realizados</div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-img ">
+      <img class="rounded"
+        src="https://img.freepik.com/free-photo/different-cosmetics-scattered-light-table_23-2148046872.jpg?w=1380&t=st=1670707059~exp=1670707659~hmac=7ef1255928b2a9c2e3adbf360abe5c47b0d547598443f4a7824e1e56d68ba030"
+        alt="" srcset="">
+    </div>
+  </div>
+  <div class="d-flex flex-wrap">
+    <div class="descripcion col-8">
+      <div class="seccion1">
+        <h4>{{ publicationInfo.tags }}</h4>
+        <hr />
+      </div>
+      <div class="seccion2">
+        <p>{{ publicationInfo.description }}</p>
+
+        <hr />
+      </div>
+    </div>
+    <div class="booking-card ms-3 col rounded shadow text-center py-5 px-3">
+      <h3>Contactame</h3>
+
+      <div class="input-group mb-3 pt-3">
+        <span class="input-group-text" id="basic-addon1" style="width: 100px;">Fecha</span>
+        <input type="date" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="width: 100px;">Horario</span>
+        <select class="form-select" id="inputGroupSelect01">
+          <option disabled selected>.....</option>
+          <option value="7">7:00</option>
+          <option value="8">8:00</option>
+          <option value="9">9:00</option>
+          <option value="10">10:00</option>
+          <option disabled value="11">11:00</option>
+          <option value="12">12:00</option>
+          <option value="13">13:00</option>
+          <option value="14">14:00</option>
+          <option disabled value="15">15:00</option>
+          <option value="16">16:00</option>
+          <option value="17">17:00</option>
+          <option value="18">18:00</option>
+          <option disabled value="19">19:00</option>
+          <option disabled value="20">20:00</option>
+          <option disabled value="21">21:00</option>
+        </select>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1" style="width: 100px;">Sevicio</span>
+        <select class="form-select" id="inputGroupSelect01">
+          <option disabled selected>.....</option>
+          <option disabled value="null">-----------CEJAS-----------</option>
+          <option value="cejas-mb#150000">microblading - $ 270.000</option>
+          <option value="cejas-sp#15000">semi permante - $ 15.000</option>
+          <option value="cejas-sp#25000">depilacion con hilo - $ 25.000</option>
+          <option disabled value="null">-----------Cabello-----------</option>
+          <option value="cabello-a">Mechas - Desde $ 100.000</option>
+          <option value="cabello-a">keratina - Desde $ 150.000</option>
+          <option value="cabello-a">Extensiones - Desde $ 500.000</option>
+          <option value="cabello-a">Corte- Desde $ 15.000</option>
+        </select>
+      </div>
+<button class="btn btn-primary text-white">Reservar ahora</button>
+    </div>
+  </div>
+  <!--
+  <div class="row ">
+    <div class="col-8 ">
       <div class="principal d-flex justify-content-center p-4">
         <div class="row w-100">
           <div class="seccion1">
@@ -19,8 +98,8 @@
         </div>
       </div>
     </div>
-    <div class="col-5 p-4">
-      <div class="carrito rounded p-2">
+    <div class="col">
+      <div class="carrito rounded p-2 bg-secondary">
         <h2 class="text-end">Reviews:</h2>
 
         <div *ngFor="let review of publicationInfo.reviews">
@@ -34,10 +113,11 @@
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field> -->
+                    </mat-form-field> -->-->
 
-        <button type="button" class="btn btn-primary w-100">Reservar</button>
+  <!--  <button type="button" class="btn btn-primary w-100">Reservar</button>
       </div>
     </div>
   </div>
 </div>
+-->
