@@ -37,7 +37,12 @@
         <hr />
       </div>
       <div class="seccion2">
-        <p>{{ publicationInfo.description }}</p>
+        <p>
+          {{
+            publicationInfo.description ||
+              "Una limpieza facial profunda recupera la luminosidad y uniformidad de tu cara. Aprende sobre cómo la limpieza facial evita imperfecciones por acné y arrugas y sobre los diferentes tratamientos de limpieza facial que puedes hacer en casa o con una limpieza facial profesional. Estarás durante una hora y 15 minutos en una confortable camilla y una esteticista te realizará el tratamiento.Recuerda que nuestras limpiezas son protocolizadas por nuestras dermatólogas. Durante la limpieza dispondrás de un consultorio agradable y climatizado para tu uso exclusivo."
+          }}
+        </p>
 
         <hr />
       </div>
@@ -136,7 +141,7 @@
                         <mat-hint>MM/DD/YYYY</mat-hint>
                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field> -->-->
+                    </mat-form-field> -->
 
   <!--  <button type="button" class="btn btn-primary w-100">Reservar</button>
       </div>
