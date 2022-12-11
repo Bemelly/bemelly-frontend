@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PublicationService } from '../../_services/publication.service';
-import {FormGroup, FormControl} from '@angular/forms';
-
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-showpublication',
@@ -41,11 +40,10 @@ export class ShowpublicationComponent implements OnInit {
     this.route.paramMap.subscribe((paramMap) => {
       const idOwner = paramMap.get('owner');
 
-      this.publicationSev.getPublication(12345).subscribe({
+      this.publicationSev.getPublication(idOwner).subscribe({
         next: (data: any) => {
           this.publicationInfo = data;
           console.log(data);
-          
         },
         error: (err: any) => {
           console.log(err);

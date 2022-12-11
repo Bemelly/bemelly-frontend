@@ -4,20 +4,30 @@
 <div class="container">
   <div class="userownerinfo">
     <div class="p-info-all d-flex align-items-end">
-      <img class="profilep" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
-        width="180" height="180" alt="">
+      <img
+        class="profilep"
+        [src]="publicationInfo.photoProfile"
+        width="180"
+        height="180"
+        alt=""
+      />
       <div class="d-flex ms-4 flex-column pb-4">
-        <h1>Fabian De Gouveia</h1>
-        <div class=" info-count">
-          <div>{{ randomStar() }}</div>
-          <div>{{ randomService() }} Servicios realizados</div>
+        <h1>{{ publicationInfo.name }}</h1>
+        <div class="info-count">
+          <div>{{ publicationInfo.stars }}</div>
+          <div>
+            {{ publicationInfo.servicesCompleted }} Servicios realizados
+          </div>
         </div>
       </div>
     </div>
-    <div class="bg-img ">
-      <img class="rounded"
+    <div class="bg-img">
+      <img
+        class="rounded"
         src="https://img.freepik.com/free-photo/different-cosmetics-scattered-light-table_23-2148046872.jpg?w=1380&t=st=1670707059~exp=1670707659~hmac=7ef1255928b2a9c2e3adbf360abe5c47b0d547598443f4a7824e1e56d68ba030"
-        alt="" srcset="">
+        alt=""
+        srcset=""
+      />
     </div>
   </div>
   <div class="d-flex flex-wrap">
@@ -27,22 +37,32 @@
         <hr />
       </div>
       <div class="seccion2">
-        <p>{{ publicationInfo.description }}
-        </p>
+        <p>{{ publicationInfo.description }}</p>
 
         <hr />
       </div>
     </div>
-    <div class="align-self-start sticky-top booking-card ms-3 col rounded shadow text-center py-5 px-3">
+    <div
+      class="align-self-start sticky-top booking-card ms-3 col rounded shadow text-center py-5 px-3"
+    >
       <h3>Contactame</h3>
 
       <div class="input-group mb-3 pt-3">
-        <span class="input-group-text" id="basic-addon1" style="width: 100px;">Fecha</span>
-        <input type="date" class="form-control" placeholder="Username" aria-label="Username"
-          aria-describedby="basic-addon1">
+        <span class="input-group-text" id="basic-addon1" style="width: 100px"
+          >Fecha</span
+        >
+        <input
+          type="date"
+          class="form-control"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1" style="width: 100px;">Horario</span>
+        <span class="input-group-text" id="basic-addon1" style="width: 100px"
+          >Horario</span
+        >
         <select class="form-select" id="inputGroupSelect01">
           <option disabled selected>.....</option>
           <option value="7">7:00</option>
@@ -64,7 +84,9 @@
       </div>
 
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1" style="width: 100px;">Sevicio</span>
+        <span class="input-group-text" id="basic-addon1" style="width: 100px"
+          >Sevicio</span
+        >
         <select class="form-select" id="inputGroupSelect01">
           <option disabled selected>.....</option>
           <option disabled value="null">-----------CEJAS-----------</option>
@@ -78,7 +100,7 @@
           <option value="cabello-a">Corte- Desde $ 15.000</option>
         </select>
       </div>
-<button class="btn btn-primary text-white">Reservar ahora</button>
+      <button class="btn btn-primary text-white">Reservar ahora</button>
     </div>
   </div>
   <!--
@@ -121,4 +143,4 @@
     </div>
   </div>
 </div>
--->
+--></div>
