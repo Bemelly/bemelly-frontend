@@ -29,6 +29,10 @@ export class NavbarComponent implements OnInit{
     }, 2000);
   }
 
+  editProfile(){
+    this.router.navigate(['userprofile'])
+  }
+
   changephoto(e: any){
     const file = e.target.files[0]
     if (!file){

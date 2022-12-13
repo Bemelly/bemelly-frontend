@@ -20,8 +20,8 @@
             <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="fileInput.click()">Cambiar foto</button>
                 <input type="file" #fileInput hidden name="filename" id="myFile" (change)="changephoto($event)" accept="image/*">
-                <button mat-menu-item>Editar perfil</button>
-                <button mat-menu-item>Ver reservas</button>
+                <button mat-menu-item (click)="editProfile()">Editar perfil</button>
+                <!-- <button mat-menu-item>Ver reservas</button> -->
                 <button mat-menu-item (click)="logout()">Cerrar sesion</button>
             </mat-menu>
         </div>
