@@ -1,72 +1,52 @@
-
 <body>
-    <!-- Heading -->
-    <div class="container mt-5 shadow-lg rounded p-5">
+  <!-- Heading -->
+  <div class="container mt-5 p-5">
+    <div class="row justify-content-center d-flex">
+      <div class="col-sm-12 col-md-12 col-lg-9 shadow-lg rounded">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-3  text-center">
-
-                <div class="sidenav aside">
-                    <a href="#about">User Profile</a>
-                    <a href="#services">Pagos</a>
-                    <a href="#clients">Clients</a>
-                    <a href="#contact">Contact</a>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-sm-12 col-md-12 col-lg-3">
+                    <img
+                      [src]="user.photoProfile"
+                      alt=""
+                      style="border-radius: 50%"
+                    />
+                  </div>
+                </div>
+                <br />
+              </div>
+              <div class="box2 ms-5 col-sm-12 col-md-12 col-lg-12">
+                <div>
+                  <h3>name</h3>
+                  <h2>{{ user.name }}</h2>
                 </div>
 
-            </div>
-
-            <div class=" col-sm-12 col-md-12 col-lg-9">
-
-                <div class="row">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class=" col-sm-12 col-md-12 col-lg-12">
-                                <div class="row d-flex justify-content-center">
-                                    <div class="col-sm-12 col-md-12 col-lg-3">
-                                        <img src="https://vimcare.com/assets/empty_user-e28be29d09f6ea715f3916ebebb525103ea068eea8842da42b414206c2523d01.png"
-                                            alt="" style="border-radius: 50%;">
-                                    </div>
-                                </div>
-                                <br>
-                            </div>
-                            <div class="box2 ms-5 col-sm-12 col-md-12 col-lg-12">
-                                <div>
-                                    <h3>name</h3>
-                                    <h2>Juan</h2>
-                                </div>
-
-                                <div>
-                                    <h3>Document</h3>
-                                    <h2>123456789</h2>
-                                </div>
-                                <div>
-                                    <h3>Email</h3>
-                                    <h2>prueba@correo.com</h2>
-                                </div>
-                                <div>
-                                    <h3>Number</h3>
-                                    <h2>3104568254</h2>
-                                </div>
-                                <div>
-                                    <h3>Role</h3>
-                                    <h2>Client</h2>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-center my-5">
-                                <button class="btn boton px-5">Editar Perfil</button>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <h3>Document</h3>
+                  <h2>{{ user.CC }}</h2>
                 </div>
+                <div>
+                  <h3>Email</h3>
+                  <h2>{{ user.email }}</h2>
+                </div>
+                <div>
+                  <h3>Role</h3>
+                  <h2>{{ user.role }}</h2>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center my-5">
+                <button class="btn boton px-5">Editar Perfil</button>
+              </div>
             </div>
-
-
-
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-
-
-    <script src="profile.js"></script>
+  <script src="profile.js"></script>
 </body>

@@ -1,65 +1,68 @@
-li{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-    font-size: 20px;
-    margin-top: 30px;
+li {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  font-size: 20px;
+  margin-top: 30px;
 }
 
-.box1{
-    text-align: center;
+.box1 {
+  text-align: center;
 }
 
-.box2{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+.box2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.boton{
-    background-color: #94f;
-    color: #fff;
-    box-shadow: 1px 5px 10px rgb(99, 37, 174);
+.boton {
+  background-color: #94f;
+  color: #fff;
+  box-shadow: 1px 5px 10px rgb(99, 37, 174);
 }
-.aside{
-    a{
-        color: #94f;
-    }
+.aside {
+  a {
+    color: #94f;
+  }
 }
-img{
-    width: 100%;
-    padding: 20px;
+img {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  object-fit: cover;
 }
 .sidenav {
-    background-color: white;
-    margin: 20px;
+  background-color: white;
+  margin: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: grey;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
-  
   .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
+    font-size: 18px;
   }
-  
-  .sidenav a:hover {
-    color: grey;
+}
+@media screen and (max-width: 40em) {
+  .box2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-
-
-  }
-  @media screen and (max-width:40em) {
-    .box2{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-    }
-
-  }
+}
