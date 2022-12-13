@@ -9,6 +9,10 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./showpublication.component.scss'],
 })
 export class ShowpublicationComponent implements OnInit {
+  fecha: any;
+  horario: any;
+  servicio: any;
+  showBooking = false;
   range = new FormGroup({
     start: new FormControl<Date | null>(null),
     end: new FormControl<Date | null>(null),
@@ -50,5 +54,16 @@ export class ShowpublicationComponent implements OnInit {
         },
       });
     });
+  }
+  toggleBooking() {
+    if (this.fecha && this.horario && this.servicio) {
+      this.showBooking = !this.showBooking;
+    }
+  }
+  changeBookingbtnColor(): boolean {
+    if (this.fecha && this.horario && this.servicio) {
+      return true;
+    }
+    return false;
   }
 }

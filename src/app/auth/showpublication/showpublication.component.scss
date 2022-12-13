@@ -1,42 +1,57 @@
-.carrito {
-  max-width: 350px;
+.reserva {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out 0.5s;
+  transform: translateX(100%);
+  &.active {
+    transform: translateX(0);
+  }
 }
-
-.container {
-  width: 1400px;
+.reservar-btn {
+  background-color: #a53dff;
 }
-
-.bg-img {
-  max-height: 300px;
-  margin-bottom: 150px;
-  margin-top: -40px;
-}
-.bg-img img {
+.banner {
+  height: 200px;
+  object-fit: cover;
   width: 100%;
-  height: 280px;
-  object-fit: cover;
 }
 
-.p-info-all {
-  position: absolute;
-  translate: 20px 130%;
-}
-
-.profilep {
+.profile {
   border-radius: 50%;
-  outline: 8px solid rgb(236, 236, 236);
-  border-left: 50px !important;
+  outline: 8px solid #a53dff;
   object-fit: cover;
+  width: 13em;
+  height: 13em;
+  // position: relative;
 }
-
-.info-count {
-  margin-top: 0px;
+.description {
+  text-align: justify;
 }
-
-h1 {
-  font-size: 40px;
+.close {
+  width: 200px;
 }
-
-h3 {
-  font-size: 20px;
+@media screen and (max-width: 40em) {
+  .reserva {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out 0.5s;
+    transform: translateX(100%);
+    &.active {
+      transform: translateX(0);
+    }
+  }
 }
