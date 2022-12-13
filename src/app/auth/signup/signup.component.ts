@@ -30,8 +30,6 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    console.log(this.form.value);
-    this.router.navigate(['users/login']) 
     if (this.form.valid) {
       this.visible = 'visibility: visible;'
       this.authService.signup(this.form.value).subscribe({
