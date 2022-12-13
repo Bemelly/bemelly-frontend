@@ -1,4 +1,7 @@
+<div class="fixed-top" id="progressvar" [style]='visible'><mat-progress-bar mode="query"></mat-progress-bar></div>
+
 <p class="text-center mb-4">Nos alegra que hayas vuelto!</p>
+
 <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
 <div class="row">
 <mat-form-field appearance="outline">
@@ -19,3 +22,6 @@
   <h6>olvide mi contraseña</h6>
 </div>
 </form>
+<div class="alerta alert alert-danger" [style]='alertanegativa' role="alert">
+  Usuario o contraseña invalida
+</div>

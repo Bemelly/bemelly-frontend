@@ -1,4 +1,11 @@
+<div class="fixed-top" id="progressvar" [style]='visible'><mat-progress-bar mode="query"></mat-progress-bar></div>
 <h2>Registrarse</h2>
+<div class="alerta alert alert-danger" [style]='alertanegativa' role="alert">
+    Ha habido un error!
+  </div>
+  <div class="alerta alert alert-success" [style]='alertapositiva' role="alert">
+   Cuenta exitosamente creada!
+  </div>
 <div class="row">
     <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="row">

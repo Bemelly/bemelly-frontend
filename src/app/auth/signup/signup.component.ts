@@ -9,6 +9,9 @@ import { AuthService } from 'src/app/_services/auth.service';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
+  visible = 'visibility: hidden;'
+  alertanegativa  = 'visibility: hidden; position: absolute; '
+  alertapositiva = 'visibility: hidden; position: absolute; '
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -28,14 +31,20 @@ export class SignupComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.form.value);
-    
+    this.router.navigate(['users/login']) 
     if (this.form.valid) {
+      this.visible = 'visibility: visible;'
       this.authService.signup(this.form.value).subscribe({
         next: (data) => {
-          this.router.navigate(['../login'])
+          this.alertapositiva = 'transition: 0.5s; visibility: visible; max-with: 200px;'
+          setTimeout(() => {
+            this.router.navigate(['users/login']) 
+           }, 2000);
         },
         error: (err) => {
           console.log(err);
+          this.alertanegativa = 'transition: 0.5s; visibility: visible; max-with: 200px;'
+          this.visible = 'visibility: hidden;'
         },
       });
     } else {

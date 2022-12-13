@@ -16,6 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { TagsComponent } from './makepublication/components/tags/tags.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -35,7 +37,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatChipsModule,
     MatIconModule,
     MatAutocompleteModule,
-    MatDatepickerModule
+    SweetAlert2Module,
+    MatProgressBarModule
   ],
   exports: [
     LoginComponent
