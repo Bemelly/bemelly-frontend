@@ -8,7 +8,10 @@
               <div class="row d-flex justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-3">
                   <img
-                    [src]="user.photoProfile"
+                    [src]="
+                      user.photoProfile ||
+                      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'
+                    "
                     alt=""
                     style="border-radius: 50%"
                   />
