@@ -1,3 +1,105 @@
-.carrito {
-    max-width: 350px;
+li {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.box1 {
+  text-align: center;
+}
+
+.box2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.boton {
+  background-color: #94f;
+  color: #fff;
+  box-shadow: 1px 5px 10px rgb(99, 37, 174);
+}
+.aside {
+  a {
+    color: #94f;
+  }
+}
+img {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  object-fit: cover;
+}
+.sidenav {
+  background-color: white;
+  margin: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: grey;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.realizado {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  bottom: 70%;
+  right: 30%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out 0.5s;
+  transform: translateY(-100%);
+  &.active {
+    transform: translateY(40%);
+  }
+}
+
+.input {
+  border: 1px solid #94f;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 40em) {
+  .box2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .realizado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all ease-out 0.5s;
+    transform: translateX(100%);
+    &.active {
+      transform: translateX(0);
+    }
+  }
 }

@@ -29,4 +29,10 @@ export class ProfileService {
   getUser(id: any): any {
     return this.http.get(`${environment.apiUrl}/api/users/getUserById/${id}`);
   }
+  modify(modification: any) {
+    return this.http.put(
+      `${environment.apiUrl}/api/users/modifyUser`,
+      modification
+    );
+  }
 }

@@ -9,6 +9,10 @@ import { TokenStorageService } from '../_services/token-storage.service';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
+  modification: any = {
+    name: '',
+    email: '',
+  };
   user: any;
   constructor(
     private profileService: ProfileService,
@@ -32,5 +36,9 @@ export class ProfileComponent implements OnInit {
         console.log(err);
       },
     });
+  }
+
+  modifyUser() {
+    // this.profileService.modify();
   }
 }

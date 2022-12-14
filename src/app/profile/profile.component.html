@@ -1,52 +1,47 @@
-<body>
-  <!-- Heading -->
-  <div class="container mt-5 p-5">
-    <div class="row justify-content-center d-flex">
-      <div class="col-sm-12 col-md-12 col-lg-9 shadow-lg rounded">
-        <div class="row">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-sm-12 col-md-12 col-lg-3">
-                    <img
-                      [src]="user.photoProfile"
-                      alt=""
-                      style="border-radius: 50%"
-                    />
-                  </div>
+<div class="container mt-5 p-5">
+  <div class="row justify-content-center d-flex">
+    <div class="col-sm-12 col-md-12 col-lg-9 shadow-lg rounded">
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="row d-flex justify-content-center">
+                <div class="col-sm-12 col-md-12 col-lg-3">
+                  <img
+                    [src]="user.photoProfile"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
                 </div>
-                <br />
               </div>
-              <div class="box2 ms-5 col-sm-12 col-md-12 col-lg-12">
-                <div>
-                  <h3>name</h3>
-                  <h2>{{ user.name }}</h2>
-                </div>
-
-                <div>
-                  <h3>Document</h3>
-                  <h2>{{ user.CC }}</h2>
-                </div>
-                <div>
-                  <h3>Email</h3>
-                  <h2>{{ user.email }}</h2>
-                </div>
-                <div>
-                  <h3>Role</h3>
-                  <h2>{{ user.role }}</h2>
-                </div>
+              <br />
+            </div>
+            <div class="box2 ms-5 col-sm-12 col-md-12 col-lg-12">
+              <div>
+                <h3>name</h3>
+                <input type="text" [value]="user.name" />
               </div>
 
-              <div class="d-flex justify-content-center my-5">
-                <button class="btn boton px-5">Editar Perfil</button>
+              <div>
+                <h3>Document</h3>
+                <h2>{{ user.CC }}</h2>
               </div>
+              <div>
+                <h3>Email</h3>
+                <input type="text" [value]="user.email" />
+              </div>
+              <div>
+                <h3>Role</h3>
+                <h2>{{ user.role }}</h2>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center my-5">
+              <button class="btn boton px-5">Editar Perfil</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <script src="profile.js"></script>
-</body>
+</div>
