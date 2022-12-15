@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit{
       const element = this.elements[index];
       element.setAttribute('style', 'filter: none');
     }
-    }, 2000);
+    }, 1500);
   }
 
 

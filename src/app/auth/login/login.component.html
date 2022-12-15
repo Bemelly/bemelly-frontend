@@ -5,21 +5,21 @@
 <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
 <div class="row">
 <mat-form-field appearance="outline">
-    <mat-label>correo</mat-label>
+    <mat-label>Correo</mat-label>
     <input matInput placeholder="usuario@gmail.com" formControlName="email">
   </mat-form-field>
 </div>
   <div class="row">
   <mat-form-field appearance="outline">
-    <mat-label>contraseña</mat-label>
+    <mat-label>Contraseña</mat-label>
     <input type="password" matInput formControlName="password">
   </mat-form-field>
 </div>
 <div class="row">
-    <button mat-raised-button color="primary">Iniciar sesion</button>
+    <button mat-raised-button color="primary">Iniciar sesión</button>
 </div>
 <div class="row mt-3 text-center">
-  <h6>olvide mi contraseña</h6>
+  <h6>Olvide mi contraseña</h6>
 </div>
 </form>
 <div class="alerta alert alert-danger" [style]='alertanegativa' role="alert">
