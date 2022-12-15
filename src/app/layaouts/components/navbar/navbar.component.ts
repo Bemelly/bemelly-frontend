@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit{
     setTimeout(() => {
       for (let index in this.elements) {
         const element = this.elements[index];
-        element.setAttribute('style', 'filter: grayscale(100%) blur(2px); transition: 1.5s');
+        element.setAttribute('style', 'filter: grayscale(8%) blur(1px); transition: 1.5s');
       }
     }, 1);
     this.visible = 'visibility: visible; filter: none'
