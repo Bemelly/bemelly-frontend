@@ -10,6 +10,7 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit{
+  elements = document.querySelectorAll('*');
   user: any
   profile: any
   visible = 'visibility: hidden;'
@@ -19,15 +20,28 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
     this.user = this.tokenService.getUser()
     this.getProfile()
+
   }
 
   logout(): void {
     this.tokenService.logout()
-    this.visible = 'visibility: visible;'
+
+    setTimeout(() => {
+      for (let index in this.elements) {
+        const element = this.elements[index];
+        element.setAttribute('style', 'filter: grayscale(100%) blur(2px); transition: 1.5s');
+      }
+    }, 1);
+    this.visible = 'visibility: visible; filter: none'
     setTimeout(() => {
      this.router.navigate(['/']) 
+     for (let index in this.elements) {
+      const element = this.elements[index];
+      element.setAttribute('style', 'filter: none');
+    }
     }, 2000);
   }
+
 
   editProfile(){
     this.router.navigate(['userprofile'])
